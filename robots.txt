@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cn.qwertyuiop130.cn/sitemap.xml

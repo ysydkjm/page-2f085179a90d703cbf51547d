@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+
+
+
+
+
+
+<style>
+
+*{ margin:0; padding:0;}
+html{}
+body{margin:0;color:#000; position: relative; font-family: "Arial"; background:#FFF;}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd {margin:0px;padding:0px;border:none;list-style:none; font-weight: normal;}
+a{text-decoration:none;  text-shadow:none;font-weight:normal;}
+ul{list-style:none;}
+textarea,input,button,select{outline:none;-webkit-appearance:none; font-family:Arial, Helvetica, sans-serif;}
+a{color:#6c6c6c;text-decoration:none;}
+img{border:none; display: block;}
+span{margin:0; padding:0; cursor: auto;}
+span:focus,div:focus {outline: none;}
+
+.Huans{-webkit-box-sizing: border-box;box-sizing: border-box;}
+.flex{display:-webkit-box;display: -ms-flexbox;display:flex;flex-wrap:wrap;align-items:flex-start;}
+.flexC{display:-webkit-box;display: -ms-flexbox;display:flex;align-items:center; flex-wrap:wrap;}
+.flexE{display:-webkit-box;display: -ms-flexbox;display:flex;align-items:flex-end; flex-wrap:wrap;}
+.fl-bet{-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content:space-between;}
+.fl-cen{-webkit-box-pack: center;-ms-flex-pack: center;justify-content:center;}
+.fl-end{-webkit-box-pack:right;-ms-flex-pack:right;justify-content:flex-end;}
+
+.IndBan{color:#fff; position: relative;background-color:#60a3f7;background-image: url("/assets/fecae7e516163f226cc0852e.webp");background-position: center bottom; background-repeat: no-repeat;;}
+.IndLog{display: block;}
+.IndLog img{width:100%;}
+
+.title{text-align: center;}
+.IndP{text-align: center;}
+
+.IndFul{ overflow: hidden; width:100%;}
+.IndFulK{position: relative;}
+.IndFulI{ position: absolute;z-index:-1;top:50%;transform: translate(0,-50%);}
+.IndFulI img{width:100%; display: block;}
+.IndFulB .title,.IndFulB .IndP{text-align: left;}
+.IndFula{background:#5980f2;color:#FFF;text-align: center; display: block;}
+
+.IndFiv{background-image: url("/assets/ad737f7e4ff6318e209fe168.webp");background-position: center bottom; background-repeat: no-repeat;}
+.IndFivK{align-content:center;}
+.IndFivN{ color:#FFF;background:#1b1929; width:100%;}
+.IndFivN img{display:block;}
+.IndFivN p{width:100%; flex:1;}
+
+.Indimg img{width:100%; display: block;}
+
+footer{background:#60a2f7;}
+.ftRa{color:#FFF;display:block;}
+
+
+
+
+@media  screen and ( min-width:1680px){
+.IndBan{ background-size:auto 1110px; height:1110px;}
+.IndBanK{ width:1200px; margin:0 auto; padding-top:112px; }
+.IndLog{ width: 286px;}
+.IndBanH{ font-size:70px; line-height:80px; margin-top:90px; letter-spacing:3px; margin-bottom:50px;}
+.IndBanC{ font-size:40px; line-height:60px;letter-spacing:1px;}
+.pc{display:block;}
+.wap{display:none;}
+.IndBanF{width:652px; margin-top:160px ;}
+.IndBanFa{ width: 300px; height: 100px; background:#FFF; padding:0 20px; margin-bottom: 68px;}
+.IndBanFa img{width:62px; display: block;}
+.IndBanFa p{ line-height:34px; font-size:24px; color:#111; width: 170px;}
+.IndBanFa:hover{ background:#faeffd;}
+
+.title{ font-size:70px; letter-spacing: 2px; line-height:100px;}
+.IndP{font-size:40px; letter-spacing:1px; line-height:90px; margin-top:50px;}
+
+.ward{width:1440px; margin:0 auto;}
+.IndFulK{height:1025px;}
+.IndFulI{width:858px;left:-125px;}
+.IndFulB{width:620px;}
+.IndFula{width:320px; height:72px;line-height:72px;border-radius:36px;font-size: 40px; margin-top:65px;}
+.IndFula:hover{background:#2f58cd;}
+
+.IndFiv{background-size: auto 923px;}
+.IndFivK{height:993px;padding:0 80px;}
+.IndFivB{width: 474px;}
+.IndFivN{padding:0 38px; height: 85px;border-radius:15px; margin-bottom: 32px;}
+.IndFivN img{width:66px;}
+.IndFivN p{line-height:50px; font-size: 36px; margin-left: 25px;}
+
+.IndSup{padding-top:100px;}
+.IndTit{}
+.IndSupI{ width:1600px; margin:140px auto 0;}
+
+.IndFee{ padding:130px 0 105px;}
+.IndFeeI{ width:976px; margin:140px auto 0;}
+
+.foot{height:364px; width: 1200px; margin:0 auto;}
+.ftLog{width:287px;}
+.ftR{width:550px; margin-top: 40px;}
+.ftRa{ font-size:30px;line-height:45px;margin-right: 50px;}
+.ftRa:hover{text-decoration:underline;}
+}
+@media screen and (max-width:1680px ) and ( min-width:1440px){
+.IndBan{ background-size:auto 975px; height:960px;}
+.IndBanK{ width:1100px; margin:0 auto; padding-top:98px; }
+.IndLog{ width: 250px;}
+.IndBanH{ font-size:62px; line-height:70px; margin-top:80px; letter-spacing:3px; margin-bottom:50px;}
+.IndBanC{ font-size:34px; line-height:50px;letter-spacing:1px;}
+.pc{display:block;}
+.wap{display:none;}
+.IndBanF{width:630px; margin-top:140px;}
+.IndBanFa{ width:290px; height:92px; background:#FFF; padding:0 20px; margin-bottom:58px;}
+.IndBanFa img{width:54px; display: block;}
+.IndBanFa p{ line-height:34px; font-size:24px; color:#111; width: 170px;}
+.IndBanFa:hover{ background:#faeffd;}
+
+.title{ font-size:62px; letter-spacing: 2px; line-height:90px;}
+.IndP{font-size:34px; letter-spacing:1px; line-height:80px; margin-top:45px;}
+
+.ward{width:1280px; margin:0 auto;}
+.IndFulK{height:925px;}
+.IndFulI{width:720px;left:-85px;}
+.IndFulB{width:550px;}
+.IndFula{width:290px;height:62px;line-height:62px;border-radius:31px;font-size:34px;margin-top:55px;}
+.IndFula:hover{background:#2f58cd;}
+
+.IndFiv{background-size: auto 820px;}
+.IndFivK{height:880px;padding:0 70px;}
+.IndFivB{width: 420px;}
+.IndFivN{padding:0 32px; height: 78px;border-radius:13px; margin-bottom:28px;}
+.IndFivN img{width:58px;}
+.IndFivN p{line-height:44px; font-size: 32px; margin-left: 21px;}
+
+.IndSup{padding-top:90px;}
+.IndTit{}
+.IndSupI{ width:1380px; margin:110px auto 0;}
+
+.IndFee{ padding:110px 0 90px;}
+.IndFeeI{ width:876px; margin:120px auto 0;}
+
+.foot{height:300px; width: 1100px; margin:0 auto;}
+.ftLog{width:240px;}
+.ftR{width:510px; margin-top:30px;}
+.ftRa{ font-size:26px;line-height:42px;margin-right:42px;}
+.ftRa:hover{text-decoration:underline;}
+}
+@media screen and (max-width:1440px ) and ( min-width:1280px){
+.IndBan{ background-size:auto 840px; height:840px;}
+.IndBanK{ width:1000px; margin:0 auto; padding-top:88px; }
+.IndLog{ width: 250px;}
+.IndBanH{ font-size:54px; line-height:60px; margin-top:72px; letter-spacing:3px; margin-bottom:40px;}
+.IndBanC{ font-size:28px; line-height:40px;letter-spacing:1px;}
+.pc{display:block;}
+.wap{display:none;}
+.IndBanF{width:520px; margin-top:130px;}
+.IndBanFa{ width:242px; height:80px; background:#FFF; padding:0 16px; margin-bottom:48px;}
+.IndBanFa img{width:50px; display: block;}
+.IndBanFa p{ line-height:30px; font-size:20px; color:#111; width: 150px;}
+.IndBanFa:hover{ background:#faeffd;}
+
+.title{ font-size:54px; letter-spacing: 2px; line-height:80px;}
+.IndP{font-size:28px; letter-spacing:1px; line-height:70px; margin-top:35px;}
+
+.ward{width:1080px; margin:0 auto;}
+.IndFulK{height:800px;}
+.IndFulI{width:620px;left:-70px;}
+.IndFulB{width:480px;}
+.IndFula{width:240px;height:54px;line-height:54px;border-radius:27px;font-size:28px;margin-top:45px;}
+.IndFula:hover{background:#2f58cd;}
+
+.IndFiv{background-size: auto 690px;}
+.IndFivK{height:750px;padding:0 60px;}
+.IndFivB{width:360px;}
+.IndFivN{padding:0 25px; height:68px;border-radius:11px; margin-bottom:24px;}
+.IndFivN img{width:46px;}
+.IndFivN p{line-height:38px; font-size:28px; margin-left:18px;}
+
+.IndSup{padding-top:75px;}
+.IndTit{}
+.IndSupI{ width:1200px; margin:90px auto 0;}
+
+.IndFee{ padding:95px 0 70px;}
+.IndFeeI{ width:720px; margin:100px auto 0;}
+
+.foot{height:240px; width: 1000px; margin:0 auto;}
+.ftLog{width:200px;}
+.ftR{width:420px; margin-top:20px;}
+.ftRa{ font-size:22px;line-height:35px;margin-right:36px;}
+.ftRa:hover{text-decoration:underline;}
+}
+@media screen and (max-width:1280px ) and ( min-width:960px){
+.IndBan{ background-size:auto 730px; height:730px;}
+.IndBanK{ width:900px; margin:0 auto; padding-top:75px; }
+.IndLog{ width: 220px;}
+.IndBanH{ font-size:46px; line-height:55px; margin-top:60px; letter-spacing:3px; margin-bottom:30px;}
+.IndBanC{ font-size:24px; line-height:35px;letter-spacing:1px;}
+.pc{display:block;}
+.wap{display:none;}
+.IndBanF{width:460px; margin-top:110px;}
+.IndBanFa{ width:215px; height:72px; background:#FFF; padding:0 14px; margin-bottom:40px;}
+.IndBanFa img{width:44px; display: block;}
+.IndBanFa p{ line-height:25px; font-size:18px; color:#111; width: 130px;}
+.IndBanFa:hover{ background:#faeffd;}
+
+.title{ font-size:46px; letter-spacing: 2px; line-height:65px;}
+.IndP{font-size:24px; letter-spacing:1px; line-height:55px; margin-top:25px;}
+
+.ward{width:900px; margin:0 auto;}
+.IndFulK{height:660px;}
+.IndFulI{width:510px;left:-50px;}
+.IndFulB{width:400px;}
+.IndFula{width:200px;height:48px;line-height:48px;border-radius:24px;font-size:24px;margin-top:35px;}
+.IndFula:hover{background:#2f58cd;}
+
+.IndFiv{background-size: auto 620px;}
+.IndFivK{height:650px;padding:0 50px;}
+.IndFivB{width:300px;}
+.IndFivN{padding:0 20px; height:60px;border-radius:10px; margin-bottom:18px;}
+.IndFivN img{width:38px;}
+.IndFivN p{line-height:34px; font-size:24px; margin-left:16px;}
+
+.IndSup{padding-top:60px;}
+.IndTit{}
+.IndSupI{ width:900px; margin:70px auto 0;}
+
+.IndFee{ padding:80px 0 60px;}
+.IndFeeI{ width:580px; margin:80px auto 0;}
+
+.foot{height:190px; width:900px; margin:0 auto;}
+.ftLog{width:180px;}
+.ftR{width:350px; margin-top:15px;}
+.ftRa{ font-size:18px;line-height:30px;margin-right:30px;}
+.ftRa:hover{text-decoration:underline;}
+}
+@media screen and (max-width:960px ) and ( min-width:640px){
+.IndBan{ background-size:auto 590px; height:590px; background-position: right bottom;}
+.IndBanK{ width:600px; margin:0 auto; padding-top:75px; }
+.IndLog{ width:200px;}
+.IndBanH{ font-size:38px; line-height:50px; margin-top:50px; letter-spacing:3px; margin-bottom:28px;}
+.IndBanC{ font-size:20px; line-height:30px;letter-spacing:1px;}
+.pc{display:none;}
+.IndBanB{width:600px; padding:0 4%; background:#FFF; border-radius:28px; position: absolute; bottom:-70px; left:0;right:0; margin:0 auto; box-shadow:0 5px 10px rgba(0,0,0,0.1);}
+.IndBanBk{ width: 100%;height:110px;}
+.IndBanB img{width:38%;}
+.IndBanBa{background:#5980f2; width:200px; height:46px; line-height:46px; border-radius:23px; color:#FFF; font-size:20px; text-align: center; display: block;}
+
+.title{ font-size:34px; letter-spacing: 2px; line-height:50px;}
+.IndP{font-size:20px; letter-spacing:1px; line-height:45px; margin-top:18px;}
+
+.ward{width:600px; margin:0 auto;}
+.IndFul{padding-top:70px;}
+.IndFulK{height:480px;}
+.IndFulI{width:380px;left:-40px;}
+.IndFulB{width:280px;}
+.IndFula{width:160px;height:42px;line-height:42px;border-radius:21px;font-size:20px;margin-top:25px;}
+
+.IndFiv{background-size: auto 460px;}
+.IndFivK{height:500px;padding:0;}
+.IndFivB{width:245px;}
+.IndFivN{padding:0 15px; height:50px;border-radius:8px; margin-bottom:14px;}
+.IndFivN img{width:30px;}
+.IndFivN p{line-height:30px; font-size:20px; margin-left:12px;}
+
+.IndSup{padding-top:50px;}
+.IndTit{}
+.IndSupI{ width:600px; margin:50px auto 0;}
+
+.IndFee{ padding:60px 0 50px;}
+.IndFeeI{ width:430px; margin:60px auto 0;}
+
+.foot{height:150px; width:600px; margin:0 auto;}
+.ftLog{width:140px;}
+.ftR{ margin-top:10px;}
+.ftRa{ font-size:16px;line-height:26px;margin-right:25px;}
+}
+@media only screen and (max-width:639px){
+.pc{display:none;}
+.wap{max-width:600px; margin:0 auto;display:block;}
+.IndBan{ background-size:100%; height:4.1rem; background-position: bottom;background-image: url("/assets/951d4743a0f9950913b4b7ea.webp");}
+.IndBanK{ width:100%; margin:0 auto; padding:0.15rem 4% 0; }
+.IndLog{ width:1rem;}
+.IndBanH{ font-size:0.2rem; line-height:0.22rem; margin-top:0.15rem; letter-spacing:2px; margin-bottom:0.15rem; text-align: center;}
+.IndBanC{ font-size:0.12rem; line-height:0.16rem;letter-spacing:1px; text-align: center;}
+.IndBanB{width:80%; padding:0 4%; background:#FFF; border-radius:0.2rem; position: absolute; bottom:-0.45rem; left:0;right:0; margin:0 auto; box-shadow:0 5px 10px rgba(0,0,0,0.1);}
+.IndBanBk{ width: 100%; height:0.64rem;}
+.IndBanB img{width:51%;}
+.IndBanBa{background:#5980f2; width:1rem; height: 0.26rem; line-height:0.26rem; border-radius:0.13rem; color:#FFF; font-size:0.13rem; text-align: center; display: block;}
+
+.title{ font-size:0.16rem; letter-spacing:1px; line-height:0.2rem;}
+.IndP{font-size:0.105rem;line-height:0.2rem; margin-top:0.1rem;}
+
+.ward{width:100%; margin:0 auto;}
+.IndFul{padding-top:0.45rem;}
+.IndFulK{height:2.1rem; padding: 0 4%;}
+.IndFulI{width:50%;left:2%;}
+.IndFulB{width:44%;}
+.IndFula{width:0.90rem;height:0.26rem;line-height:0.26rem;border-radius:0.13rem;font-size:0.105rem;margin-top:0.15rem;}
+
+.IndFiv{background-size: auto 1.5rem;background-position: bottom right}
+.IndFivK{height:2.1rem;padding:0 5% 0.1rem;}
+.IndFivB{width:1.22rem;}
+.IndFivN{padding:0 0.08rem; height:0.27rem;border-radius:0.05rem; margin-bottom:0.06rem;}
+.IndFivN img{width:0.14rem;}
+.IndFivN p{line-height:0.2rem; font-size:0.1rem; margin-left:0.06rem;}
+
+.IndSup{padding-top:0.3rem;}
+.IndTit{ padding:0 4%;}
+.IndSupI{ width:100%; margin:0.25rem auto 0;}
+
+.IndFee{ padding:0.3rem 0 0.2rem;}
+.IndFeeI{ width:60%; margin:0.2rem auto 0;}
+
+.foot{ width:100%;padding:0.14rem 4%}
+.ftLog{width:0.8rem;}
+.ftR{ margin-top:0.1rem;}
+.ftRa{ font-size:0.115rem;line-height:0.2rem;margin-left:0.15rem;}
+
+}
+
+html {font-size: 625%; }
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait){html{font-size:703%;}}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait){html{font-size:732.4%;}}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait){html{font-size:750%; }}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait){html{font-size:781.25%;}}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){html{font-size:808.6%;}}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){html {font-size:843.75%;}}
+
+
+
+
+</style>
+<style>.bootstrap-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  
+  height: 660px;
+  margin-left: -211px;
+  margin-top: -330px;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  display: none;
+}
+
+.bootstrap-modal .close {
+  position: absolute;
+  left: 50%;
+  bottom: -66px;
+  width: 160px;
+  height: 36px;
+  margin-left: -80px;
+  line-height: 34px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 18px;
+  font-size: 14px;
+}
+
+.bootstrap-modal .close:hover {
+  background-color: #5468BE;
+  border-color: #5468BE;
+}
+@media screen and (max-width: 768px) {
+          .bootstrap-modal {
+              width: 250px;
+              height: 390px;
+              margin-left: -125px;
+              margin-top: -195px;
+          }
+
+          .bootstrap-modal .close {
+              bottom: -50px;
+              width: 100px;
+              height: 28px;
+              line-height: 26px;
+              margin-left: -50px;
+          }
+      }
+   .ios-modal {
+      text-align: center;
+      padding: 0;
+      max-width: 950px;
+      box-shadow: none;
+    }
+
+    .bootstrap-modal .share>*+* {
+      margin-top: 15px;
+    }
+
+    .bootstrap-modal .share {
+      background: #fff;
+      padding: 20px 60px;
+      border-radius: 10px;
+    }
+
+    .bootstrap-modal .share-title {
+      font-size: 22px;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .bootstrap-modal .share-paragraph {
+      font-size: 14px;
+      color: #000;
+      text-align: center;
+      margin-top: 15px;
+      max-width: 550px;
+    }
+
+    .bootstrap-modal .btn-close {
+      padding: 15px 40px;
+      border-radius: 20px;
+      background: #3F61FF;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-bottom: 5px;
+    }
+    
+    @media screen and (max-width: 512px) {
+      .bootstrap-modal .hide_mobile{
+        display:none;
+      }
+      .bootstrap-modal .share {
+        padding: 20px 30px;
+      }
+
+      .bootstrap-modal .share-paragraph {
+        text-align: left;
+      }
+
+      .bootstrap-modal .btn-close {        
+        margin-bottom: 4px;
+      }
+    }
+
+      
+          .bootstrap-modal .share>*+* {
+              margin-top: 15px;            
+          }
+          .bootstrap-modal .btn-close {
+              padding: 15px 40px;
+              border-radius: 20px;
+              background: #3F61FF;
+              color: #fff;
+              font-size: 14px;
+              text-align: center;
+              outline: none;
+              border: none;
+              text-decoration: none;
+              transition: all 0.2s;
+              margin-bottom: 5px;
+          }
+          @media screen and (max-width: 512px){
+              .bootstrap-modal .btn-close {
+                  margin-bottom: 4px;
+              }
+          }
+          .one-bg{
+              position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .6);display: none;
+          }</style>
+<style>
+*{margin:0px; padding:0px; font-weight:normal;}
+html{height:100%;}
+body{color: #000; font-family:"microsoft yahei", Arial, Helvetica, sans-serif; height:100%; font-size:0.1rem;background:#fff;}
+a{text-decoration:none;  text-shadow:none;font-weight:normal; color: #000;-webkit-tap-highlight-color: rgba(255, 255, 255, 0);-webkit-user-select: none;-moz-user-focus: none;-moz-user-select: none;}
+ul{list-style:none;}
+textarea,input,button{outline:none;-webkit-appearance:none;font-family:Microsoft YaHei;}
+.clear{ clear:both; overflow:hidden; height:0px;}
+.dk{ width:100%; max-width:750px; min-width:320px; margin:0 auto;height:100%; background-size:100%; background-repeat:no-repeat; background-attachment:fixed;}
+img{ border:0; display: block;}
+input[type="button"],input[type="checkbox"],input[type="radio"], input[type="submit"], input[type="reset"],select {-webkit-appearance: none;outline:none; border:none;font-family:Microsoft YaHei;}
+span:focus,div:focus,a:focus{outline: none;}
+html {font-size: 625%; }
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait){html{font-size:703%;}}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait){html{font-size:732.4%;}}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait){html{font-size:750%; }}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait){html{font-size:781.25%;}}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){html{font-size:808.6%;}}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){html {font-size:843.75%;}}
+@-webkit-keyframes rotation{
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes scale-three2{
+0% {transform:scale(1);opacity:.8;}
+100% {transform:scale(1.3);opacity:0;}
+}
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0px;
+  height: 0px;
+}
+
+@media screen and (max-width:640px){
+.pc-dk{display: none;}
+.dk{display: block;}
+}
+
+.waphdBg{height: 4.6rem;background-size: cover;background-repeat: no-repeat;background-position: center top;background-image: url("");}
+.waphdk{padding-top: 0.4rem;margin:0 auto;}
+.waplogo{width: 0.35rem;margin:0 auto;}
+.waplogo img{width: 100%;}
+.waptitle{margin-top: 0.1rem;text-align: center;}
+.waptitle h3{color: #fff;font-size: 0.36rem;font-weight: 520;line-height: 0.44rem;}
+.waptitle h5{color: #fff;font-size: 0.12rem;line-height: 0.2rem;}
+.wapdownB{background-color: #fff;width: 76%;margin:2.3rem auto 0;display: flex;justify-content: space-between; padding: 0 8%;box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);height: 0.8rem;border-radius: 20px;align-items: center;}
+.wapdown-l{display: flex;align-items: center;}
+.waplogoB img{height: 0.46rem;}
+.wapdescB h2{font-size: 0.2rem;line-height: 0.24rem}
+.wapdescB h3{font-size: 0.13rem;line-height: 0.2rem}
+.wapdownA{background-image: linear-gradient(to bottom, #d65f7e, #9547ac);width: 0.8rem;height: 0.26rem;border-radius: 0.3rem;line-height: 0.26rem;text-align: center;color: #fff;font-size: 0.14rem;}
+
+
+.wapmain-one{padding: 0.2rem 0 0.6rem;}
+.wapmain-one-dk{width: 80%;margin:0 auto;}
+.wapone-imgB{width: 0.6rem;margin:0 auto;}
+.wapone-imgB img{width: 100%;}
+.wapmain-one-desc h2{color: #3b3b3b;font-size: 0.22rem;line-height: 0.4rem;text-align: center;}
+.wapmain-one-desc h3{font-size: 0.13rem;color: #3b3b3b;line-height: 0.2rem;text-align: center;}
+.wapone-english{margin-top: 0.1rem;text-align: center;}
+.wapone-english p{color: #3b3b3b;font-size: 0.1rem;}
+.wappicB{margin-top: 0.3rem;}
+.wappicB img{width: 100%;}
+
+.wapmain-two{background-position: center;background-repeat: no-repeat;background-image: url("");background-size: cover;padding: 0 0 0.5rem;}
+.wapmain-two-dk{margin:0 auto;padding-top: 0.5rem;}
+.wapmain-two-logo{width: 197px;margin:0 auto;}
+.wapmain-two-logo img{width: 100%;}
+.wapmain-two-desc{padding-top: 18px;}
+.wapmain-two-desc h2{text-align: center;}
+.wapmain-two-desc p{text-align: center;}
+.wapmain-two-dk i{display: block;width: 0.3rem;margin:0.1rem auto 0.2rem;}
+.wapmain-two-dk i img{width: 100%;}
+.wapmain-two-list{display: flex;justify-content: center;flex-wrap: wrap;}
+.waplistImg{width: 0.5rem;margin:0 auto;}
+.waplistImg img{width: 100%;}
+.wapmain-two-list .waplistA{display: block;width: 28%;padding: 0.2rem 0.04rem;border-radius: 0.1rem;background-image: linear-gradient(to bottom, #d65f7e, #9547ac);margin:0 1% 0.08rem;}
+.wapmain-two-list .waplistA h3{margin-top: 0.1rem; color: #fff;font-size: 0.14rem;width: 100%;position: relative;text-align: center;line-height: 0.2rem;}
+.wapmain-two-list .waplistA h3:before,.main-two-list .listA h3:after{display: block;content: '';position: absolute;width: 0.08rem;height: 0.02rem;top: 0.09rem;background-color: #fff;}
+.wapmain-two-list .waplistA h3:after{right: 0;}
+.wapmain-two-list .waplistA h3:before{left: 0;}
+.wapmain-two-list .waplistA p{color: #fff;font-size: 0.11rem;line-height: 0.2rem;text-align: center;margin-top: 0.05rem;}
+
+
+.wapmain-three-dk{width: 1374px;margin:0 auto;padding-top: 190px;display: flex;justify-content: space-between;}
+.wapmain-three-l{width: 645px;padding-top: 108px;}
+.wapmain-three-l img{width: 100%;}
+.wapmain-three-r{width: 686px;text-align: right;}
+.wapmain-three-r-img{display: flex;width: 254px;margin-left: auto;}
+.wapmain-three-r-img img{width: 100%;}
+.wapmain-three-r h2{font-size: 72px;line-height: 134px;color: #212121;margin-top: 6px;}
+.wapmain-three-r h3{font-size: 34px;line-height: 50px;color: #3b3b3b;}
+.wapenglish{margin-top: 30px;}
+.wapenglish p{font-size: 12px;color: #3b3b3b;line-height: 18px;}
+
+
+.wapmain-four{padding: 0.4rem 0 0.6rem;background-color: #f6f6f6;}
+.wapmain-four-l{text-align: left;}
+.wapmain-four-r-img{margin-left: 0;width: 153px;}
+.wapmain-four-r{width: 597px;}
+.wapmain-four-r img{width: 100%;}
+
+
+.wapfooter{height: 1.2rem;background-image: url("");background-repeat: no-repeat;background-position: center;background-size: cover;}
+.wapftL{width: 100px;margin:0 auto;padding-top: 0.22rem;}
+.wapftL img{width: 100%;}
+.wapcopy{text-align: center;color: #fff;font-size: 0.1rem;line-height: 0.16rem;margin-top: 0.02rem;}
+
+
+.wapfd-downB{position: fixed;bottom: 0;left: 0;right: 0;max-width: 750px;min-width: 320px; background-color: #fff;width: 100%;margin:0 auto ;box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);height: 0.5rem;}
+.wapfd-w{padding: 0.05rem 4% 0;width: 92%;display: flex;justify-content: space-between;align-items: center;}
+.wapfd-down-l{display: flex;align-items: center;}
+.waplogoB img{height: 0.4rem;}
+.wapfd-descB h2{font-size: 0.16rem;line-height: 0.2rem}
+.wapfd-descB h3{font-size: 0.12rem;line-height: 0.2rem}
+.wapfd-downA{background-image: linear-gradient(to bottom, #5980f2, #5980f2);width: 0.8rem;height: 0.26rem;border-radius: 0.3rem;line-height: 0.26rem;text-align: center;color: #fff;font-size: 0.14rem;}
+
+@media screen and (min-width:640px){
+
+	.waphdBg{height: 10.6rem;}
+	.wapdownB{margin: 7.8rem auto 0;}
+	.wapfooter{background-size: cover;}
+	.wapmain-two{background-size: cover;}
+}
+
+@media (min-width:676px) {
+	.wapfd-downB{
+		display: none;
+	}
+}</style>
+
+
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>一元机场|2026最新注册地址</title><meta content="一元机场,2026最新注册地址" name="keywords"/><meta content="一元机场2026最新注册地址，一元机场提供基础版、旗舰版与团队版三档套餐，月付价格从 ¥15 到 ¥85，按年付对应 ¥150/年、¥350/年、¥850/年。入门用户可用基础版每月 100GB 流量与 3 台设备；常看流媒体或玩游戏的用户适合旗舰版的 300GB 流量、5 台设备与 IPLC 专线；团队版则提供 1000GB 流量、20 台设备与专属客户经理。" name="description"/><meta content="一元机场|2026最新注册地址" property="og:title"/><meta content="一元机场2026最新注册地址，一元机场提供基础版、旗舰版与团队版三档套餐，月付价格从 ¥15 到 ¥85，按年付对应 ¥150/年、¥350/年、¥850/年。入门用户可用基础版每月 100GB 流量与 3 台设备；常看流媒体或玩游戏的用户适合旗舰版的 300GB 流量、5 台设备与 IPLC 专线；团队版则提供 1000GB 流量、20 台设备与专属客户经理。" property="og:description"/><link rel="canonical" href="https://cn.qwertyuiop130.cn/">
+<meta property="og:url" content="https://cn.qwertyuiop130.cn/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://cn.qwertyuiop130.cn/", "name": "一元机场|2026最新注册地址", "description": "一元机场2026最新注册地址，一元机场提供基础版、旗舰版与团队版三档套餐，月付价格从 ¥15 到 ¥85，按年付对应 ¥150/年、¥350/年、¥850/年。入门用户可用基础版每月 100GB 流量与 3 台设备；常看流媒体或玩游戏的用户适合旗舰版的 300GB 流量、5 台设备与 IPLC 专线；团队版则提供 1000GB 流量、20 台设备与专属客户经理。", "inLanguage": "zh-CN"}</script><style>html{scroll-behavior:smooth}header,.header,.navbar-fixed-top,.fixed-top{position:relative!important;top:auto!important}body[data-template="10"] .splash-container,body[data-template="10"] .splash,body[data-template="10"] .content-wrapper{position:relative!important;top:auto!important;left:auto!important;height:auto!important;min-height:0!important;transform:none!important}body[data-template="10"] .splash{padding:48px 24px!important;margin:0 auto!important}body[data-template="10"] .content-wrapper{margin:0!important}body[data-template="10"] .footer{position:static!important;clear:both!important;line-height:1.6!important;height:auto!important;bottom:auto!important}body[data-template="10"] .footer p{line-height:1.6!important;height:auto!important;margin:12px 0!important}body[data-template="04"] .w3l-banner-slider{overflow:hidden}.publisher-quicknav{position:relative;z-index:10001;display:flex;flex-wrap:wrap;gap:12px;padding:12px 20px;background:#fff;color:#172033;font:14px/1.5 system-ui;border-bottom:1px solid #ddd}.publisher-quicknav a{color:inherit;text-decoration:none}.publisher-quicknav a:first-child{font-weight:700;margin-right:auto}.animated{animation:none!important;opacity:1!important;transform:none!important}.publisher-section{position:relative!important;clear:both!important;height:auto!important;min-height:0!important}.publisher-section *{position:static!important;transform:none!important;float:none!important;line-height:1.6!important}.publisher-section .card{width:auto!important;height:auto!important;inset:auto!important;display:block!important;margin:0!important;padding:24px!important}.publisher-section h2,.publisher-section h3{height:auto!important;line-height:1.4!important}body{overflow-x:clip}*{box-sizing:border-box}body>main{max-width:100%}.publisher-brand{font-size:22px;font-weight:bold}.main-bar-txt{left:0!important;right:0!important;margin:0 auto!important;max-width:100%!important}hr{max-width:100%}img{max-width:100%;height:auto}.wow,[data-aos]{visibility:visible!important;opacity:1!important}.preloader,#preloader,.loading-screen,.off-canvas,.panel-inner{display:none!important}.publisher-section{max-width:1120px;margin:64px auto;padding:24px;color:inherit}.row.justify-content-center{margin-left:0!important;margin-right:0!important;max-width:100%}.publisher-clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px}.publisher-clients .client{border:1px solid #8886;border-radius:12px;padding:18px}.publisher-section .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.publisher-section .plan-card{border:1px solid #8886;border-radius:16px;padding:24px;position:relative}.publisher-section .plan-price{font-size:32px;font-weight:bold}.publisher-section details{border-bottom:1px solid #8886;padding:18px 0}.publisher-section summary{cursor:pointer;font-weight:600}.publisher-section .button{display:inline-block;padding:12px 20px;border:1px solid currentColor;border-radius:8px}.publisher-section li{margin:10px 0}.publisher-section p{line-height:1.8}@media(max-width:700px){body[data-template="06"] .banner{background:linear-gradient(150deg,#ffb55d,#e98036)!important}body[data-template="06"] .bannerBox .title{padding-top:72px;line-height:1.4;font-size:28px}body[data-template="11"] h1.banner-title1-text{font-size:30px;line-height:1.4;margin:0}body[data-template="14"] .home-background{min-height:0!important;height:auto!important;padding:24px 0!important}body[data-template="17"] .callout .col-4{flex:0 0 100%;max-width:100%;padding:12px}body[data-template="17"] .callout .h2{font-size:22px}.publisher-section .cards{grid-template-columns:1fr}.publisher-section{margin:32px auto;padding:16px}h1{overflow-wrap:anywhere}.badge{white-space:normal;max-width:100%}.main-bar-txt{left:0!important;right:0!important;margin:0 auto!important;max-width:100%!important}.device,.device-info{max-width:100%}hr{max-width:100%}section,header,footer,main,.container,.row{max-width:100%}.row{margin-left:0!important;margin-right:0!important}table{max-width:100%}img{max-width:100%}}</style><meta name="publisher-task" content="2f085179a90d703cbf51547d:2fd6a4f8c3d1f7c801154615a2ea373e31439162be77d3de0ae84bf62ef8b913:04e50c2d6948e61c2e37"></head>
+
+<body data-template="16" id="top"><nav aria-label="页面导航" class="publisher-quicknav"><a href="#top">一元机场</a><a href="#features">特点</a><a href="#clients">客户端</a><a href="#plans">套餐</a><a href="#faq">常见问题</a></nav><main id="main"><time date-time="C8EGmy"></time><sup dir="j6vd90"></sup><var lang="tlAqeJ"></var>
+
+    <article class="IndBan Huans">
+        <section class="IndBanK Huans" id="features">
+            <a class="IndLog" href="#"></a>
+            <h1 class="IndBanH" lang="IGTi8c">一元机场|2026最新注册地址</h1>
+            <div class="IndBanC" lang="nG79zY"><time draggable="NaaaoW"></time><var dir="tJ868H"></var><dfn date-time="PIC460"></dfn>旗舰版 300GB 与 5 台设备</div>
+            <div class="pc btn-download" lang="CyOXCs"><bdo dir="yrFTOp"></bdo><ins lang="ejw3ww"></ins><font dir="oEuWJx"></font>
+                <div class="IndBanF flex fl-bet" lang="D8oWNn"><font draggable="oMOhHb"></font><bdo dir="pFO5Ly"></bdo><font draggable="BKPwHw"></font>
+                    <a class="IndBanFa Huans flexC fl-bet" data-type="ios" href="#clients">
+                        <img alt="一元机场" decoding="async" loading="lazy" src="/assets/6b64341ed61b860c28c9270a.png"/><p>客户端</p> 
+                    </a>
+                    <a class="download-btn IndBanFa Huans flexC fl-bet" data-type="android" href="#clients">
+                        <img alt="一元机场" decoding="async" loading="lazy" src="/assets/880199014ee353ab042948c7.png"/><p>客户端</p>
+                    </a>
+                    <a class="download-btn IndBanFa Huans flexC fl-bet" data-type="pc" href="#clients">
+                        <img alt="一元机场" decoding="async" loading="lazy" src="/assets/15ec3b4771d4dffee93caadb.png"/><p>客户端</p>
+                    </a>
+                    <a class="download-btn IndBanFa Huans flexC fl-bet" data-type="mac" href="#clients">
+                        <img alt="一元机场" decoding="async" loading="lazy" src="/assets/7b5f7a6ae90f0b2e7a4ee32d.png"/><p>客户端</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="IndBanB wap Huans">
+            <div class="IndBanBk flexC fl-bet" lang="dUYkBl"><ins dropzone="2eJuRr"></ins><var dir="cModVV"></var><dfn draggable="H6yN9X"></dfn>
+            <span class="publisher-brand">团队版 1000GB 支持 20 台</span>
+            <a class="download-btn IndBanBa btn-download" data-type="download" href="#clients" id="common-download-id">客户端</a>
+            </div>
+        </section>
+    </article>
+    
+    <article class="IndFul">
+        <section class="IndFulK flexC fl-end ward Huans">
+			<div class="IndFulI" lang="XnWExS"><map dropzone="gkVN28"></map><tt date-time="JDQ1N2"></tt><map date-time="e0zMuR"></map><img alt="一元机场" decoding="async" loading="lazy" src="/assets/4b2a52397b7c3c90bd140667.webp"/></div>
+            <div class="IndFulB" lang="Yi7psN"><dfn lang="7tKHAj"></dfn><ins lang="DAO0Lj"></ins><font dropzone="2g9FJE"></font>
+				<div class="title" lang="FuWzMN"><small draggable="2iRTas"></small><dfn dir="hNnfkQ"></dfn><map lang="HeFin7"></map>按流量需求选档</div>
+				<div class="IndP" lang="tK49Om"><font dropzone="pQF5Bd"></font><font lang="Unu2Ym"></font><tt date-time="ZuJijB"></tt>一元机场把订阅方案分成基础版、旗舰版和团队版，分别对应个人轻度使用、多设备重度和团队共享场景。选套餐时先看每月流量、同时在线设备数与线路类型，再结合是否需要流媒体解锁或游戏加速，就能找到合适的档位。<br/>基础版每月 100GB，旗舰版 300GB，团队版 1000GB。</div>
+				<a class="IndFula btn-download" data-type="download" href="#">立即体验</a>
+            </div>            				
+        </section>
+    </article>
+    
+    <article class="IndFiv">
+        <section class="IndFivK flexC ward Huans">
+			<div class="IndFivB" lang="GKClwf"><map lang="RvwUiR"></map><small dir="wFTL2w"></small><time dropzone="VKKbGC"></time>
+				<div class="IndFivN flexC Huans" lang="O4z6gR"><area lang="xOd6CE"/><tt draggable="2pofot"></tt><area dropzone="JWHJ5h"/>
+					<img alt="一元机场" decoding="async" loading="lazy" src="/assets/8179845a72b74af498ee9385.png"/><p>基础版 3 台、旗舰版 5 台、团队版 20 台同时在线。</p>
+				</div>
+				<div class="IndFivN flexC Huans" lang="ZAIYZr"><map lang="onFfM8"></map><small lang="SXns5q"></small><map dir="uGa7xy"></map>
+					<img alt="一元机场" decoding="async" loading="lazy" src="/assets/3f37012f32f1ac8a31bc35e3.png"/><p>旗舰版含 IPLC 专线游戏优化，团队版可定制路由。</p>
+				</div> 
+				<div class="IndFivN flexC Huans" lang="FYclJL"><ins draggable="69kiSy"></ins><dfn dir="lMt3wu"></dfn><small dropzone="lMrH0D"></small>
+					<img alt="一元机场" decoding="async" loading="lazy" src="/assets/e00496a41911df05604aaa3e.png"/><p>不同系统匹配不同客户端，请按设备类型选择并参考对应文档配置订阅。</p>
+				</div> 
+				<div class="IndFivN flexC Huans" lang="O78431"><area lang="AH6ORv"/><area dir="LzIFyT"/><sup dir="GZL5Vn"></sup>
+					<img alt="一元机场" decoding="async" loading="lazy" src="/assets/fd7d68a42626e1e1ce6126ab.png"/><p>根据每月流量和同时在线设备数，在基础版、旗舰版、团队版中选定一档。</p>
+				</div> 
+				<div class="IndFivN flexC Huans" lang="asmVha"><sup dropzone="EiSruv"></sup><time dir="JBoOSa"></time><time dir="c9TDGk"></time>
+					<img alt="一元机场" decoding="async" loading="lazy" src="/assets/4eeb76c96b1b3281f2a0ebd9.png"/><p>确认常用设备系统与客户端类型，查看套餐的设备数量限制是否满足。</p>
+				</div> 
+			</div>
+        </section>
+    </article>
+	
+    <article class="IndSup">
+		<section class="IndTit ward Huans">
+            <div class="title" lang="xeSFd2"><var draggable="BDVetd"></var><var draggable="i6D9vK"></var><ins dropzone="eA7Eib"></ins>按设备数选档</div>
+            <div class="IndP" lang="N2r96z"><font dropzone="nVyKS9"></font><dfn lang="U87Ge5"></dfn><area lang="xxx91G"/>购买后按所选客户端的文档说明，把订阅链接导入并更新节点。</div>
+        </section>  
+        <section class="IndSupI Huans Indimg"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/18de30f9810823afedf15c07.webp"/></section>
+    </article>
+	
+    <article class="IndFee">
+		<section class="IndTit ward Huans">
+            <div class="title" lang="wfu4sE"><area dir="OPqC35"/><small date-time="P9atkN"></small><dfn date-time="ftnAuU"></dfn>按线路定位选档</div>
+            <div class="IndP" lang="gkDx0g"><time date-time="AQhUst"></time><var draggable="rMwmw9"></var><small draggable="eTaHuX"></small>对照流量与设备数选定档位，按客户端文档导入订阅即可开始使用。</div>
+        </section>  
+        <section class="IndFeeI Indimg Huans"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/a6e8c7612e0fbf559dd67f4f.webp"/></section>
+    </article>
+	
+	<footer>
+		<div class="foot Huans flexC fl-bet" lang="yvnoE6"><font dropzone="5LO5jX"></font><dfn date-time="rC43XZ"></dfn><var lang="d8vj29"></var>
+			<a class="ftLog Indimg" href="#"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/41fcdf025aa651a8a0547754.png"/></a>
+			<div class="ftR flexC" lang="qXgDzE"><bdo draggable="NwSAPy"></bdo><font date-time="hqXiu3"></font><tt draggable="JtDC1R"></tt>
+				<a class="ftRa" href="#">立即体验</a>
+				<a class="ftRa" href="#">立即体验</a>
+				<a class="ftRa" href="#">立即体验</a>
+				<div class="copxx_L" lang="MKYv8m" style="font-size:12px"><sup date-time="EuJSjg"></sup><time lang="zDlUUV"></time><small lang="Coxrqp"></small>一元机场把订阅方案分成基础版、旗舰版和团队版，分别对应个人轻度使用、多设备重度和团队共享场景。选套餐时先看每月流量、同时在线设备数与线路类型，再结合是否需要流媒体解锁或游戏加速，就能找到合适的档位。<a href="#">立即体验</a>基础版每月 100GB，旗舰版 300GB，团队版 1000GB。</div>
+			</div>
+		</div>
+	</footer>
+
+    <div class="one-bg" id="one-bg" lang="XdWjCq" style="display: none;"><sup lang="C7wWgS"></sup><area dropzone="pGxfOB"/><time date-time="iCvusI"></time></div>
+    <div class="bootstrap-modal ios-modal" id="ios-modal" lang="9zmRjr" style="display: none;"><time draggable="0iavqv"></time><bdo draggable="GktvfE"></bdo><var date-var="00vwvl"></var>
+
+        <div id="ios-modal-section" lang="a0WiCQ"><ins lang="EoFBrY"></ins><var draggable="rxmW55"></var><sup date-time="nlZjYQ"></sup>
+            <div class="share" lang="DeFkP5"><small dropzone="RKev7L"></small><tt dropzone="QeBuYE"></tt><small dropzone="5CnQtA"></small>
+                <div class="share-title" lang="tRlSoT"><ins dropzone="BuTnIh"></ins><var draggable="yaXMlG"></var><sup lang="cm9mz8"></sup>确定套餐档位</div>
+                <div class="share-paragraph" lang="95G2vc" style="font-size: 16px;"><area lang="DEGKRS"/><ins dir="Q7YRgt"></ins><sup date-time="nUagKC"></sup>基础版 3 台、旗舰版 5 台、团队版 20 台同时在线。</div>
+    
+                <div lang="x5J5mZ"><bdo dir="FMdIri"></bdo><tt dropzone="gViUlY"></tt><area lang="D0iCEh"/>
+                <a href="#"><div class="btn-close close-bootstrap-modal" style="font-size: 16px;">立即体验</div></a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+	
+
+
+
+
+
+
+
+
+
+<section class="publisher-section" id="clients"><h2>一元机场设备客户端</h2><p>不同系统匹配不同客户端，请按设备类型选择并参考对应文档配置订阅。</p><div class="publisher-clients"><div class="client"><span class="platform" aria-hidden="true">W</span><h3>Windows</h3><p>桌面电脑</p><a href="#">下载 Windows ↗</a></div><div class="client"><span class="platform" aria-hidden="true">M</span><h3>macOS</h3><p>Mac 电脑</p><a href="#">下载 macOS ↗</a></div><div class="client"><span class="platform" aria-hidden="true">i</span><h3>iOS</h3><p>iPhone / iPad</p><a href="#">下载 iOS ↗</a></div><div class="client"><span class="platform" aria-hidden="true">A</span><h3>Android</h3><p>安卓手机与平板</p><a href="#">下载 Android ↗</a></div><div class="client"><span class="platform" aria-hidden="true">L</span><h3>Linux</h3><p>Linux 桌面</p><a href="#">下载 Linux ↗</a></div></div></section><section class="publisher-section" id="plans"><h2>套餐选择</h2><p>一元机场把订阅方案分成基础版、旗舰版和团队版，分别对应个人轻度使用、多设备重度和团队共享场景。选套餐时先看每月流量、同时在线设备数与线路类型，再结合是否需要流媒体解锁或游戏加速，就能找到合适的档位。</p><div class="cards"><div class="card plan-card"><h3>基础版</h3><div class="plan-price">¥15/月</div><p class="plan-annual">按年付仅需 ¥150/年</p><ul class="plan-list"><li>每月 100GB 极速流量</li><li>支持 3 台设备同时在线</li><li>解锁基础流媒体</li><li>普通线路节点池</li></ul><a href="#" class="button primary">立即购买 ↗</a></div><div class="card plan-card featured"><span class="plan-badge">最受欢迎</span><h3>旗舰版</h3><div class="plan-price">¥35/月</div><p class="plan-annual">按年付仅需 ¥350/年</p><ul class="plan-list"><li>每月 300GB 极速流量</li><li>支持 5 台设备同时在线</li><li>全节点原生流媒体解锁</li><li>IPLC 专线游戏加速优化</li><li>7x24 优先工单支持</li></ul><a href="#" class="button primary">立即购买 ↗</a></div><div class="card plan-card"><h3>团队版</h3><div class="plan-price">¥85/月</div><p class="plan-annual">按年付仅需 ¥850/年</p><ul class="plan-list"><li>每月 1000GB 极速流量</li><li>支持 20 台设备同时在线</li><li>VIP 专属高带宽节点</li><li>支持企业定制路由</li><li>专属客户经理服务</li></ul><a href="#" class="button primary">立即购买 ↗</a></div></div></section><section class="publisher-section" id="faq"><h2>常见问题</h2><details><summary>一元机场基础版适合哪些用户？</summary><p>基础版每月 100GB 流量、支持 3 台设备，适合个人日常浏览与轻度观看，价格 ¥15/月，按年付 ¥150/年。</p></details><details><summary>旗舰版比基础版多了什么？</summary><p>旗舰版每月 300GB 流量、支持 5 台设备，包含全节点原生流媒体解锁和 IPLC 专线游戏加速优化，另有 7x24 优先工单支持。</p></details><details><summary>团队版能否满足多人共享？</summary><p>团队版每月 1000GB 流量、支持 20 台设备同时在线，提供 VIP 专属高带宽节点与企业定制路由，并配有专属客户经理服务。</p></details><details><summary>按年付比按月付省多少？</summary><p>基础版按年 ¥150/年、旗舰版 ¥350/年、团队版 ¥850/年，相当于各档月付价格的十个月支出，适合长期使用。</p></details><details><summary>订阅链接导入客户端后如何更新节点？</summary><p>在客户端内找到订阅管理并执行更新，节点列表会随订阅刷新；不同客户端的更新入口名称不同，可对照其使用文档操作。</p></details></section><nav class="publisher-section" aria-label="相关站点"><h2>相关站点</h2><a href="https://qwertyuiop130.cn/">STC</a> <a href="https://nijcrjv.cn/">一元机场</a> <a href="https://njlfmm.cn/">一元机场</a> </nav></main><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
